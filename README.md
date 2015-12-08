@@ -38,7 +38,7 @@ Your `Student` instances should initialize with a name, grade and an optional id
 
 `Student` attributes should have an `attr_accessor` for `name` and `grade` but only an `attr_reader` for `id`. The only place `id` can be set equal to something is inside the initialize method, via: `@id = some_id`
 
-### The `#create_table` Method
+### The `.create_table` Method
 
 This is a class method that creates the students table. Use a heredoc to set a variable, `sql`, equal to the necessary SQL statement. Remember, the attribures of a student, `name`, `grade`, and `id`, should correspond to the column names you are creating in your students table. The `id` column should be the primary key. 
 
