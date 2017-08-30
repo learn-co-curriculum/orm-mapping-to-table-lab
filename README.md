@@ -17,7 +17,9 @@ Our administrators need to save the student objects that this class produces to 
 Let's take a look:
 
 ```ruby
-require 'sqlite3'
+require 'bundler'
+Bundler.require
+
 require_relative '../lib/student'
 
 DB = {:conn => SQLite3::Database.new("db/students.db")}
@@ -59,3 +61,5 @@ Use bound paremeters to pass the given student's name and grade into the SQL sta
 This is a class method that uses keyword arguments. The keyword arguments are `name:` and `grade:`. Use the values of these keyword arguments to: 1) instantiate a new `Student` object with `Student.new(name, grade)` and 2) save that new student object via `student.save`. The `#create` method should return the student object that it creates. 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/orm-mapping-to-table-lab'>Mapping Classes to Tables Lab</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/orm-mapping-to-table-lab'>Mapping Classes to Tables Lab</a> on Learn.co and start learning to code for free.</p>
